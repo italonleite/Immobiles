@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Immobiles.Data", "src\Immob
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Immobiles.Api", "src\Immobiles.Api\Immobiles.Api.csproj", "{392829AC-3D96-40D9-905C-48CE21239BB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Immobiles.Test", "src\Immobiles.Test\Immobiles.Test.csproj", "{E1BFC3A1-7E21-43FC-92E7-2ED329828327}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{392829AC-3D96-40D9-905C-48CE21239BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{392829AC-3D96-40D9-905C-48CE21239BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{392829AC-3D96-40D9-905C-48CE21239BB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1BFC3A1-7E21-43FC-92E7-2ED329828327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1BFC3A1-7E21-43FC-92E7-2ED329828327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1BFC3A1-7E21-43FC-92E7-2ED329828327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1BFC3A1-7E21-43FC-92E7-2ED329828327}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
