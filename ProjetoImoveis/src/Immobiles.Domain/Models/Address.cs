@@ -6,24 +6,27 @@ namespace Immobiles.Domain.Models
 {
     public class Address
     {
-        public Guid EnderecoId { get; set; }
+        public Guid AddressId { get; set; }
         public string Cep { get; set; }
         public string Neighborhood { get; set; }
-        public string StreetAddres { get; set; }
+        public string StreetAddress { get; set; }
         public string City { get; set; }
         public string State { get; set; }
+        public Immobile Immobiles { get; set; }
+
+
 
         public Address()
         {
 
         }
 
-        public Address(Guid enderecoId, string cep, string neighborhood, string streetAddres, string city, string state)
+        public Address(Guid addressId, string cep, string neighborhood, string streetAddress, string city, string state)
         {
-            EnderecoId = enderecoId;
+            AddressId = addressId;
             Cep = cep;
             Neighborhood = neighborhood;
-            StreetAddres = streetAddres;
+            StreetAddress = streetAddress;
             City = city;
             State = state;
         }

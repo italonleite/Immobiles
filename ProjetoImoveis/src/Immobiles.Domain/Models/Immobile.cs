@@ -8,6 +8,7 @@ namespace Immobiles.Domain.Models
     {
         public Guid ImmobileId { get; set; }
         public EType EType { get; set; }
+        public Guid AddressId { get; set; }
         public Address Address { get; set; }
 
         public Immobile()

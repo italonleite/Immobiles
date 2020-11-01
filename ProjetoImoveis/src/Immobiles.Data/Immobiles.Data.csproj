@@ -6,6 +6,12 @@
 
   <ItemGroup>
     <PackageReference Include="microsoft.entityframeworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.relational" Version="3.1.9" />
+    <PackageReference Include="microsoft.entityframeworkCore.sqlServer" Version="3.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Immobiles.Domain\Immobiles.Domain.csproj" />
   </ItemGroup>
 
 </Project>
