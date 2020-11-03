@@ -1,5 +1,6 @@
 ﻿using Immobiles.Domain;
 using Immobiles.Domain.Models;
+using Immobiles.Domain.Models.Validation;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -30,10 +31,11 @@ namespace Immobiles.Test.Teste_de_Unidade
         {
             //arrange
             User user = new User(Guid.NewGuid(), "italonleite", "italonleite@gmail.com", "123");
+            UserValidation uservalidation = new UserValidation();
 
             //act
-            var result = user.IsValid();
-
+            var result = uservalidation.IsValid(user);
+          
             //assert
             Assert.True(result);
 

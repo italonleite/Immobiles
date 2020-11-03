@@ -1,17 +1,19 @@
 ﻿using FluentValidation;
+using FluentValidation.Results;
+using Immobiles.Domain.Models.Validation;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Immobiles.Domain.Models
 {
-    public class User : Entity
+    public class User 
     {
         public Guid UserId { get; set; }
         public string Login { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public ICollection<Announcement> announcements { get; set; }
+        public ICollection<Announcement> Announcements { get; set; }
 
         public User()
         {
@@ -47,31 +49,8 @@ namespace Immobiles.Domain.Models
 
             return announcement;
         }
-
-        public override bool IsValid()
-        {
-            ValidationResult = new UsuarioValidacao().Validate(this);
-            return ValidationResult.IsValid;
-        }
+        
     }
 
-    public class UsuarioValidacao : AbstractValidator<User>
-    {
-        public UsuarioValidacao()
-        {
-            RuleFor(u => u.Login)
-                .NotEmpty().WithMessage("Por favor, certifique-se de ter inserido o nome")
-                .Length(2, 20).WithMessage("O Login deve ter entre 2 e 20 caracteres");
-
-            RuleFor(u => u.Password)
-               .NotEmpty().WithMessage("Por favor, certifique-se de ter inserido a senha");
-
-
-            RuleFor(u => u.Email)
-                .NotEmpty().EmailAddress();
-
-            RuleFor(u => u.UserId)
-                .NotEqual(Guid.Empty);
-        }
-    }
+    
 }
