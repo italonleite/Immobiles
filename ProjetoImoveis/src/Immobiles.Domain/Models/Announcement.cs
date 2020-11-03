@@ -23,6 +23,8 @@ namespace Immobiles.Domain
         public decimal Value { get; set; }
         public decimal CondominiumValue { get; set; }
         public decimal Iptu { get; set; }
+        public Guid UserId { get; set; }
+        public Guid ImmobileId { get; set; }
         public User User { get; set; }
         public Immobile Immobile { get; set; }
 
