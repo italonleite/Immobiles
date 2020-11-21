@@ -14,15 +14,15 @@ namespace Immobiles.Test.Teste_de_Unidade
         public void Usuario_DeveCriarAnuncio()
         {
             //arrange
-            var user = new User(Guid.NewGuid(), "italonleite", "italonleite@gmail.com", "123");
-            var address = new Address(Guid.NewGuid(), "21210250", "sds", "xyza", "pancas", "es");
-            var immobile = new Immobile(Guid.NewGuid(), EType.COMERCIAL, address);
+            var user = new User("italonleite", "italonleite@gmail.com", "123");
+            var address = new Address("21210250", "sds", "xyza", "pancas", "es");
+            var immobile = new Immobile(EType.COMERCIAL, address);
 
             //act
-            var announcement = user.CreateAnnouncement(Guid.NewGuid(), 1, 1, 1, 1, 1, 1, "description", 100, user, immobile);
+            var announcement = user.CreateAnnouncement(1, 1, 1, 1, 1, 1, "description", 100, 10, 100, user, immobile);
 
             //assert
-            Assert.NotNull(announcement);
+            Assert.NotNull(announcement);            
             Assert.IsType<Announcement>(announcement);
 
         }
@@ -30,7 +30,7 @@ namespace Immobiles.Test.Teste_de_Unidade
         public void Usuario_NovoUsuario_DeveEstarValido()
         {
             //arrange
-            User user = new User(Guid.NewGuid(), "italonleite", "italonleite@gmail.com", "123");
+            User user = new User("italonleite", "italonleite@gmail.com", "123");
             UserValidation uservalidation = new UserValidation();
 
             //act
