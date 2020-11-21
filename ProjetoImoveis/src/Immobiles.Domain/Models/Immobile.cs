@@ -4,23 +4,19 @@ using System.Text;
 
 namespace Immobiles.Domain.Models
 {
-    public class Immobile
+    public class Immobile : Entity
     {
-        public Guid ImmobileId { get; set; }
         public EType EType { get; set; }
         public Guid AddressId { get; set; }
         public Address Address { get; set; }
 
-        public Immobile()
+     
+        public Immobile(EType eType, Address address)
         {
-
-        }
-
-        public Immobile(Guid immobileId, EType eType, Address address)
-        {
-            ImmobileId = immobileId;
+            
             EType = eType;
             Address = address;
+            AddressId = address.Id;
         }
     }
 }

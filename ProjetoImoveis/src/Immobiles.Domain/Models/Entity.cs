@@ -8,11 +8,12 @@ namespace Immobiles.Domain.Models
     public abstract class Entity
     {
 
-        public ValidationResult ValidationResult { get; protected set; }
-
-        public virtual bool IsValid()
+        protected Entity()
         {
-            throw new NotImplementedException();
+            Id = Guid.NewGuid();
         }
+
+        public Guid Id { get; set; }
+        
     }                                              
 }

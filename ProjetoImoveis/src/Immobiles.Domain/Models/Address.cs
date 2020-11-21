@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Immobiles.Domain.Models
 {
-    public class Address
+    public class Address : Entity
     {
-        public Guid AddressId { get; set; }
         public string Cep { get; set; }
         public string Neighborhood { get; set; }
         public string StreetAddress { get; set; }
@@ -19,9 +18,8 @@ namespace Immobiles.Domain.Models
 
         }
 
-        public Address(Guid addressId, string cep, string neighborhood, string streetAddress, string city, string state)
-        {
-            AddressId = addressId;
+        public Address(string cep, string neighborhood, string streetAddress, string city, string state)
+        {            
             Cep = cep;
             Neighborhood = neighborhood;
             StreetAddress = streetAddress;

@@ -5,9 +5,8 @@ using System.Text;
 
 namespace Immobiles.Domain
 {
-    public class Announcement
+    public class Announcement : Entity
     {
-        public Guid AnnouncementId { get; set; }
         //area util
         public decimal UsefulArea { get; set; }
         //quarto
@@ -33,9 +32,9 @@ namespace Immobiles.Domain
 
         }
 
-        public Announcement(Guid announcementId, decimal usefulArea, int bedroom, int bathroom, int suite, int vacancy, int walk, string description, decimal value, decimal condominiumValue, decimal iptu, User user, Immobile immobile)
+        public Announcement(decimal usefulArea, int bedroom, int bathroom, int suite, int vacancy, int walk, string description, decimal value, decimal condominiumValue, decimal iptu, User user, Immobile immobile)
         {
-            AnnouncementId = announcementId;
+           
             UsefulArea = usefulArea;
             Bedroom = bedroom;
             Bathroom = bathroom;
@@ -46,6 +45,8 @@ namespace Immobiles.Domain
             Value = value;
             CondominiumValue = condominiumValue;
             Iptu = iptu;
+            UserId = user.Id;
+            ImmobileId = immobile.Id;
             User = user;
             Immobile = immobile;
         }

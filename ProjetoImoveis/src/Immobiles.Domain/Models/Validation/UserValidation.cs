@@ -29,7 +29,7 @@ namespace Immobiles.Domain.Models.Validation
             RuleFor(u => u.Email)
                 .NotEmpty().EmailAddress();
 
-            RuleFor(u => u.UserId)
+            RuleFor(u => u.Id)
                 .NotEqual(Guid.Empty);
         }
     }
