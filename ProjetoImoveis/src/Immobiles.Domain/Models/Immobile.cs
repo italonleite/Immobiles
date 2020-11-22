@@ -10,7 +10,10 @@ namespace Immobiles.Domain.Models
         public Guid AddressId { get; set; }
         public Address Address { get; set; }
 
-     
+        public Immobile()
+        {
+
+        }
         public Immobile(EType eType, Address address)
         {
             

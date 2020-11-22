@@ -11,7 +11,8 @@ namespace Immobiles.Domain.Models
         public string StreetAddress { get; set; }
         public string City { get; set; }
         public string State { get; set; }
-        
+        public Guid ImmobileId { get; set; }
+        public Immobile Immobile { get; set; }
 
         public Address()
         {
