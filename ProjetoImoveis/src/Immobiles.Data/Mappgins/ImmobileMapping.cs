@@ -11,11 +11,13 @@ namespace Immobiles.Data.Mappgins
     {
         public void Configure(EntityTypeBuilder<Immobile> builder)
         {
-            builder.HasKey(i => i.ImmobileId);
+            builder.ToTable("Imobiles");
+            builder.HasKey(i => i.Id);
             builder.Property(i => i.EType);
-            builder.HasOne(a => a.Address)
-                   .WithOne(ai => ai.Immobiles)
-                   .HasForeignKey<Immobile>(ai => ai.AddressId);
+            builder.HasOne(i => i.Address)
+                   .WithOne(ia => ia.Immobile)
+                   .HasForeignKey<Immobile>(ia => ia.AddressId);
         }
+       
     }
 }

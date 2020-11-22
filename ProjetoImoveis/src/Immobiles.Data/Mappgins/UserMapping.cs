@@ -12,7 +12,7 @@ namespace Immobiles.Data.Mappgins
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.ToTable("Users");
-            builder.HasKey(u => u.UserId);
+            builder.HasKey(u => u.Id);
             builder.Property(u => u.Login).HasColumnType("varchar(9)");
             builder.Property(u => u.Email);
             builder.Property(u => u.Password);

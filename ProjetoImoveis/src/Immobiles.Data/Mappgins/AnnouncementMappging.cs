@@ -13,7 +13,7 @@ namespace Immobiles.Data.Mappgins
         public void Configure(EntityTypeBuilder<Announcement> builder)
         {
             builder.ToTable("Announcements");
-            builder.HasKey(a => a.AnnouncementId);
+            builder.HasKey(a => a.Id);
             builder.Property(a => a.Bathroom);
             builder.Property(a => a.Bedroom);
             builder.Property(a => a.CondominiumValue).HasColumnType("decimal(5,3)");
@@ -26,7 +26,7 @@ namespace Immobiles.Data.Mappgins
             builder.Property(a => a.UsefulArea).HasColumnType("decimal(5,3)");
             builder.HasOne(u => u.User)
                    .WithMany(au => au.Announcements)
-                   .HasForeignKey(au => au.AnnouncementId);
+                   .HasForeignKey(au => au.Id);
         }
     }
 }
