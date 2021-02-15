@@ -14,7 +14,7 @@ namespace Immobiles.Test.Teste_de_Unidade
         public void Usuario_DeveCriarAnuncio()
         {
             //arrange
-            var user = new User(Guid.NewGuid(), "italonleite", "italonleite@gmail.com", "123");
+            var user = new User(Guid.NewGuid(), "italonleiteTeste1", "italonleite@gmail.com", "123");
             var address = new Address(Guid.NewGuid(), "21210250", "sds", "xyza", "pancas", "es");
             var immobile = new Immobile(Guid.NewGuid(), EType.COMERCIAL, address);
 
@@ -30,7 +30,7 @@ namespace Immobiles.Test.Teste_de_Unidade
         public void Usuario_NovoUsuario_DeveEstarValido()
         {
             //arrange
-            User user = new User(Guid.NewGuid(), "italonleite", "italonleite@gmail.com", "123");
+            User user = new User(Guid.NewGuid(), "italonleiteValido", "italonleite@gmail.com", "123");
             UserValidation uservalidation = new UserValidation();
 
             //act
